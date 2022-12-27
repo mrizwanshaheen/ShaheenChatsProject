@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "938739880193",
+    "project_id": "shaheenchats-6b3c4",
+    "storage_bucket": "shaheenchats-6b3c4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:938739880193:android:2bacf656c841227f480b00",
+        "android_client_info": {
+          "package_name": "com.example.whatsapp_ui"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "938739880193-1bsniik2rjsf8ud9ceiftib3ebfs9dqu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlBs621q3EQPN_o7iEyNt8jUuBv4_R10M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "938739880193-1bsniik2rjsf8ud9ceiftib3ebfs9dqu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "938739880193-t990ffdkeapgn5ed7g2l246e4cjeo4v3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.whatsappUi"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
