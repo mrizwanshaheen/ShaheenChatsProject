@@ -1,17 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_ui/colors.dart';
 
-class BottomChatField extends StatelessWidget {
+class BottomChatField extends StatefulWidget {
   const BottomChatField({
     Key? key,
   }) : super(key: key);
 
   @override
+  State<BottomChatField> createState() => _BottomChatFieldState();
+}
+
+class _BottomChatFieldState extends State<BottomChatField> {
+  bool isShowSendButton = false;
+  @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Expanded(
-          child: TextField(
+          child: TextFormField(
+            onChanged: (val) {
+              if (val.isNotEmpty){
+                setState(() {
+                  isShowSendButton = true;
+                });
+              } else {
+                setState(() {
+                  isShowSendButton = true;
+                });
+              }
+            },
+            
             decoration: InputDecoration(
               filled: true,
               fillColor: mobileChatBoxColor,
@@ -90,7 +108,8 @@ class BottomChatField extends StatelessWidget {
           child: CircleAvatar(
             backgroundColor: const Color(0xFF128C7E),
             radius: 25,
-            child: Icon(Icons.send, color: Colors.white,),
+            child: Icon(
+              isShowSendButton ? Icons.send : Icons.mic, color: Colors.white,),
           ),
         ),
       ],
