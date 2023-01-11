@@ -21,20 +21,27 @@ class LandingScreen extends StatelessWidget {
           children: [
             const SizedBox(height: 50),
             const Text(
-              'Welcome to WhatsApp',
+              'Welcome to ShaheenChats',
               style: TextStyle(
-                fontSize: 33,
+                fontSize: 28,
                 fontWeight: FontWeight.w600,
               ),
             ),
-            SizedBox(height: size.height / 9),
+            SizedBox(
+              height: 4,
+            ),
+            Text(
+              'This application is created by Muhammad Rizwan Shaheen',
+              style: TextStyle(color: Colors.grey),
+            ),
+            SizedBox(height: size.height / 13),
             Image.asset(
               'assets/bg.png',
               height: 340,
               width: 340,
               color: tabColor,
             ),
-            SizedBox(height: size.height / 9),
+            SizedBox(height: size.height / 10),
             const Padding(
               padding: EdgeInsets.all(15.0),
               child: Text(

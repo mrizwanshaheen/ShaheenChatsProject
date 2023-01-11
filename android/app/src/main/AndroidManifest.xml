@@ -14,7 +14,7 @@
     <uses-permission  android:name="android.permission.BLUETOOTH"  />
    <application
         android:label="whatsapp_ui"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

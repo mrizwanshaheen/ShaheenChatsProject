@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_ui/colors.dart';
-import 'package:whatsapp_ui/info.dart';
 import 'package:whatsapp_ui/features/chat/widgets/chat_list.dart';
 import 'package:whatsapp_ui/widgets/web_chat_appbar.dart';
 import 'package:whatsapp_ui/features/chat/widgets/contacts_list.dart';
@@ -47,6 +46,7 @@ class WebLayoutScreen extends StatelessWidget {
                 const Expanded(
                   child: ChatList(
                     recieverUserId: '',
+                    isGroupChat: false,
                   ),
                 ),
                 Container(

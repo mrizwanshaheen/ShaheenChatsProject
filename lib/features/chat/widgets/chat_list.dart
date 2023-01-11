@@ -5,10 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
+
 import 'package:whatsapp_ui/common/enums/message_enum.dart';
 import 'package:whatsapp_ui/common/providers/message_reply_provider.dart';
 import 'package:whatsapp_ui/common/widgets/loader.dart';
-
 import 'package:whatsapp_ui/features/chat/controller/chat_controller.dart';
 import 'package:whatsapp_ui/features/chat/widgets/my_message_card.dart';
 import 'package:whatsapp_ui/features/chat/widgets/sender_message_card.dart';
@@ -16,9 +16,11 @@ import 'package:whatsapp_ui/models/message.dart';
 
 class ChatList extends ConsumerStatefulWidget {
   final String recieverUserId;
+  final bool isGroupChat;
   const ChatList({
     Key? key,
     required this.recieverUserId,
+    required this.isGroupChat,
   }) : super(key: key);
 
   @override
@@ -51,8 +53,13 @@ class _ChatListState extends ConsumerState<ChatList> {
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<List<Message>>(
-        stream:
-            ref.read(chatControllerProvider).chatStream(widget.recieverUserId),
+        stream: widget.isGroupChat
+            ? ref
+                .read(chatControllerProvider)
+                .groupchatStream(widget.recieverUserId)
+            : ref
+                .read(chatControllerProvider)
+                .chatStream(widget.recieverUserId),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Loader();

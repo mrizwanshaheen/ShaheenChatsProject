@@ -1,0 +1,4 @@
+storePassword=shaheen
+keyPassword=shaheen
+keyAlias=upload
+storeFile=/Users/apple/upload-keystore.jks
